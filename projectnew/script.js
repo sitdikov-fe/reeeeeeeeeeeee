@@ -13,23 +13,16 @@ var schukaT; var scorpionT; var seledkaT; var sinicaT; var sovaT; var tigerT;
 
 var container = document.querySelector(".container");
 
-var img = document.querySelectorAll('img'),
-    i = 0,
-    max = img.length,
-    left,
-    top;
+var img = document.querySelectorAll('img');
 
-for (; i < max; i += 1) {
-    left = Math.random() * (document.body.offsetWidth - 100)  + 'px'; 
-    top = Math.random() * (document.body.offsetHeight - 100)  + 'px';
-    console.log(left);
-    console.log(top);
-    // 100 - это размер картинки, чтобы не смещалась за пределы body
-    
+for (let i = 0; i < img.length; i++) {
+  let left = Math.random() * (document.body.offsetWidth - 100)
+  let top = Math.random() * (document.body.offsetHeight - 100)
+  // 100 - это размер картинки, чтобы не смещалась за пределы body
 
-    img[i].style.left = left;
-    img[i].style.top = top;
-    
+
+  img[i].style.left = left + 'px';
+  img[i].style.top = top + 'px';
 }
 
 
